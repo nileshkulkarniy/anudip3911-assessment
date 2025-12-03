@@ -1,24 +1,18 @@
-public class NumberChecker {
+import java.util.Scanner;
 
-    public static String checkEvenOrOdd(int number) {
-        if (number % 2 == 0) {
-            return "Even";
-        } else {
-            return "Odd";
-        }
-    }
-
+public class OddEvenCheck {
     public static void main(String[] args) {
-        int number1 = 42;
-        System.out.println("The number " + number1 + " is: " + checkEvenOrOdd(number1));
+        Scanner scanner = new Scanner(System.in);
 
-        int number2 = 97;
-        System.out.println("The number " + number2 + " is: " + checkEvenOrOdd(number2));
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
 
-        int number3 = 0;
-        System.out.println("The number " + number3 + " is: " + checkEvenOrOdd(number3));
+        if (number % 2 == 0) {
+            System.out.println(number + " is EVEN.");
+        } else {
+            System.out.println(number + " is ODD.");
+        }
 
-        int number4 = -15;
-        System.out.println("The number " + number4 + " is: " + checkEvenOrOdd(number4));
+        scanner.close();
     }
 }
